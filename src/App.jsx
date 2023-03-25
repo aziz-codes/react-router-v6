@@ -1,10 +1,9 @@
+import Login from "./components/Login";
 import Home from "./Home";
 
 const App = () => {
   let isLoggedIn = true;
-  return (
-    <>{isLoggedIn ? <Home /> : "Please Login to continue to your account"}</>
-  );
+  return <>{isLoggedIn ? <Home /> : <Login />}</>;
 };
 
 export default App;

@@ -1,5 +1,7 @@
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
+import { Route, Routes } from "react-router-dom";
+import { Dashboard, About, Users } from "./pages/index";
 
 const Home = () => {
   return (
@@ -9,13 +11,11 @@ const Home = () => {
         <div className="flex flex-col w-full">
           <Navbar />
           <div className="px-4">
-            <h2>Someother content</h2>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab
-              mollitia provident nesciunt officiis cupiditate, accusantium
-              voluptate eos repellendus tempora. Numquam quaerat quas molestias
-              maxime culpa pariatur, iusto reiciendis quo veniam.
-            </p>
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/users" element={<Users />} />
+            </Routes>
           </div>
         </div>
       </div>
