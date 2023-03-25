@@ -1,7 +1,14 @@
 import React from "react";
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
 
 const App = () => {
-  return <div className="text-red-500">App</div>;
+  return (
+    <>
+      <Navbar />
+      <Sidebar />
+    </>
+  );
 };
 
 export default App;
